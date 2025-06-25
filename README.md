@@ -1,6 +1,6 @@
 # English Janala - Vocabulary Learning App
 
-👉 [Live Demo](https://b11-a6-english-janala-ph.netlify.app/)  
+👉 [Live Demo](https://shauncuier.github.io/English-Janala/)  
 👉 [GitHub Repository](https://github.com/shauncuier/English-Janala.git)
 
 ## Project Overview
