@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English জানালা</title>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=96&id=yauDoZYEux9L&format=png" type="image/x-icon" />
+
+    <!-- Tailwind and daisyUI from CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font-Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+    <style>
+        .active {
+            background: #422AD5;
+            color: white;
+        }
+    </style>
+</head>
+
+<body id="home" style="font-family: 'Poppins', sans-serif" class="bg-[#F8F8F8]">
+
+    
+    <!-- Header -->
+
+    <header class="sticky w-full top-0 z-50">     
+        <!-- Nav -->
+        <nav id="navbar" class="border-b-2 border-gray-300 py-5 backdrop-blur-sm hidden">
+            <div class="w-11/12 mx-auto">
+                <div class="flex flex-col sm:flex-row gap-5 items-center justify-between">
+                    <div class="">
+                        <a href="#home" class="flex justify-start items-center text-xl"><span
+                                class="font-bold">English</span>
+                            <img src="./assets/logo.png" alt="" />
+                            জানালা
+                        </a>
+                    </div>
+                    <div class="">
+                        <ul class="menu menu-horizontal px-1 gap-5">
+                            <li>
+                                <a href="#faq" class="btn btn-outline btn-primary"><i
+                                        class="fa-solid fa-circle-question"></i> FAQ</a>
+                            </li>
+                            <li>
+                                <a href="#learnVoc" class="btn btn-outline btn-primary"><i
+                                        class="fa-solid fa-book-open"></i> Learn</a>
+                            </li>
+                            <li>
+                                <a id="logoutBtn" class="btn btn-outline btn-primary"><i
+                                        class="fa-solid fa-right-from-bracket"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="">
+        <div class="flex flex-col-reverse md:flex-row justify-between w-11/12 mx-auto items-center">
+            <div class="flex-1">
+                <h1 class="mb-6 text-5xl font-bold text-[#18181B]">
+                    <span class="text-[#00BCFF]">English</span> is Easy!!
+                </h1>
+                <p class="md:text-2xl text-lg text-justify font-medium opacity-80 text-[#18181B] mb-7">
+                    আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+                    আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে
+                    যাবে অন্য একটি Level এ
+                </p>
+                <div class="flex flex-col md:w-1/2 gap-5" action="">
+                    <input id="userName" class="input" placeholder="Enter Your Name" type="text" />
+                    <input id="password" class="input" placeholder="Enter Login Code (123456)"
+                        type="password" />
+                    <div>
+                        <button id="loginBtn" class="btn btn-primary">
+                            Get Started
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1">
+                <img src="./assets/hero-student.png" alt="" />
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+    <!-- Let's Learn Vocabularies -->
+    <section id="learnVoc" class="hidden w-11/12 mx-auto lg:mb-[100px] lg:mt-[100px]">
+        <h1 class="text-center text-[36px] font-bold text-[#18181B] mb-20">
+            <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
+        </h1>
+        <div id="levelDisplay" class="flex flex-wrap justify-center gap-5 mb-5"></div>
+
+        <!-- Loder -->
+        <section id="loader" class="text-center py-10 hidden">
+            <span class="loading loading-dots loading-xl"></span>
+        </section>
+        <!-- Loder End -->
+
+        <!-- lesson -->
+        <div id="lessonWordContainer" class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10 bg-gray-100 p-7 rounded-md">
+            <div class="col-span-3 flex justify-center items-center bg-white rounded-md">
+                <div class="text-center py-16">
+                    <p class="text-sm text-[#79716B]">
+                        তুমি এখনও কোন পাঠ নির্বাচন করোনি।
+                    </p>
+                    <h2 class="text-[#292524] mt-3 text-3xl font-medium">
+                        একটি পাঠ নির্বাচন করুন।
+                    </h2>
+                </div>
+            </div>
+        </div>
+        <!-- lesson End -->
+    </section>
+
+    <!-- Modal Start -->
+    <dialog id="wordDetails" class="modal">
+        <div class="modal-box">
+            <div id="details-container"></div>
+            <div class="modal-action justify-start">
+                <form method="dialog">
+                    <button class="btn btn-primary">Complete Learning</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+    <!-- Modal Start End -->
+
+    <!-- Let's Learn Vocabularies End -->
+
+    <!-- Frequently Asked Questions -->
+    <section id="faq" class="hidden w-11/12 mx-auto lg:mb-[100px] lg:mt-[100px]">
+        <h1 class="text-center text-[36px] font-bold text-[#18181B] mb-20">
+            <span class="text-[#00BCFF]">Frequently</span> Asked Questions
+        </h1>
+
+        <div class="space-y-3">
+            <!-- Q1 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" checked="checked" />
+                <div class="collapse-title font-semibold">
+                    1. The difference between code var, let, and const
+                </div>
+                <div class="collapse-content text-sm">
+                    <p>
+                        <strong>var:</strong> Function-scoped, can be redeclared/updated,
+                        hoisted
+                    </p>
+                    <p>
+                        <strong>let:</strong> Block-scoped, can be updated but not
+                        redeclared, not hoisted
+                    </p>
+                    <p>
+                        <strong>const:</strong> Block-scoped, cannot be updated or
+                        redeclared, not hoisted
+                    </p>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">
+                    2. The difference between map(), forEach(), and filter()
+                </div>
+                <div class="collapse-content text-sm text-justify">
+                    <p>
+                        <strong>map():</strong> Creates new array by transforming each
+                        element
+                    </p>
+                    <p>
+                        <strong>forEach():</strong> Executes function on each element but
+                        doesn't return anything
+                    </p>
+                    <p>
+                        <strong>filter():</strong> Creates new array with elements that
+                        pass a test condition
+                    </p>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">
+                    3. Explain arrow functions and how they are different from regular
+                    functions
+                </div>
+                <div class="collapse-content text-sm text-justify">
+                    Arrow functions are shorter syntax for writing functions. Key
+                    differences: 1. No 'this' binding 2. Can't be used as constructors
+                    3. Don't have arguments object 4. Can't use 'yield' within them
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">
+                    4. How JavaScript Promises work?
+                </div>
+                <div class="collapse-content text-sm text-justify">
+                    Promises are objects representing eventual completion of async
+                    operations. They have three states: 1. Pending: Initial state 2.
+                    Fulfilled: Operation completed successfully 3. Rejected: Operation
+                    failed Use .then() for success and .catch() for errors.
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-3" />
+                <div class="collapse-title font-semibold">
+                    5. How closures work in JavaScript?
+                </div>
+                <div class="collapse-content text-sm text-justify">
+                    Closures are functions that can access variables from their outer
+                    scope even after the outer function has returned. They retain access
+                    to variables in their lexical scope and are commonly used for data
+                    privacy and maintaining state.
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Frequently Asked Questions End -->
+
+    <!-- Footer -->
+    <footer class="border-t-2 border-[#FFEBEB]">
+        <div class="flex flex-col md:flex-row md:justify-between justify-center md:items-end w-11/12 mx-auto py-24 space-y-5 md:space-y-0">
+            <div class="space-y-3">
+                <div class="">
+                    <a href="#home" class="flex justify-start items-center text-xl"><span
+                            class="font-bold">English</span>
+                        <img src="./assets/logo.png" alt="" />
+                        জানালা
+                    </a>
+                </div>
+                <p class="font-medium">ইংরেজি শিখুন সহজে</p>
+                <p>Providing ED-Tech Applications since 2025</p>
+            </div>
+            <div class="space-y-4">
+                <p class="font-semibold text-[#18181B] opacity-60">Follow us</p>
+                <div class="space-x-2 text-2xl">
+                    <a target="_blank" href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a target="_blank" href="https://x.com/"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JavaScripts -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+</html>
