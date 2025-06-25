@@ -4,11 +4,7 @@
 👉 [GitHub Repository](https://github.com/shauncuier/English-Janala.git)
 
 ## Project Overview
-Interactive web application for learning English vocabulary with:
-- Multiple difficulty levels
-- Word pronunciation
-- Detailed word explanations
-- FAQ section for JavaScript concepts
+English Janala is an interactive vocabulary learning platform designed to help users master English words through structured lessons. The application features multiple difficulty levels, pronunciation guides, and detailed word explanations. It also includes an educational FAQ section covering key JavaScript programming concepts.
 
 ## Features
 - User authentication system
@@ -73,5 +69,3 @@ npm run dev
 - SweetAlert integration
 - Word pronunciation feature
 - Custom Bengali font integration
-
-
