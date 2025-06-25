@@ -6,7 +6,7 @@
 ### WELCOME TO ASSIGNMENT-006
 # ENGLISH <img width="25px" src="./assets/logo.png" /> JANALA
 
-## Private Repo Link : https://classroom.github.com/a/JPUEMrmw
+## Repo Link : https://github.com/shauncuier/English-Janala.git
 
  **📅 Deadline For 60 marks**: 16th March , 2025 ( 11:59 pm ⏱️)
 
